@@ -1,2 +1,2 @@
-# PHP
-Repository untuk menyimpan file pembelajaran bahasa pemrograman php 
+# Learning PHP
+Backend web development menggunakan php native 
