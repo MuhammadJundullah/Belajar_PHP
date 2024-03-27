@@ -1,2 +1,2 @@
 # Learning PHP
-Backend web development menggunakan php native 
+Repository untuk menyimpan file pembelajaran bahasa pemrograman php 
