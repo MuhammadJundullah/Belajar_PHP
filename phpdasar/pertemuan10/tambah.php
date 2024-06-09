@@ -1,6 +1,8 @@
 <?php 
     require 'functions.php'; // Pastikan file functions.php sudah disertakan dengan benar
 
+
+    // cek apakah data berhasil atau gagal di tambahkan
     if ( isset($_POST["submit"]) ) { 
         if( tambah($_POST) > 0) {
             echo "

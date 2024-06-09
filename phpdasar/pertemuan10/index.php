@@ -24,7 +24,7 @@
 		}
 		table {
 			background-color: silver;
-			margin-left: 200px;
+			margin: 100px;
 		}
 	</style>
 </head>
@@ -34,7 +34,7 @@
 	<a href="tambah.php">Tambah Mahasiswa</a>
 	<br><br>
 
-<table border cellpadding="20" cellspacing="0">
+<table border="1px" cellpadding="20" cellspacing="0">
 	<tr> 
 		<th>No</th>
 		<th>Aksi</th>
@@ -48,12 +48,12 @@
 <?php foreach ( $mahasiswa as $row ) : ?>
 	<tr>
 		<td><?php echo $i; ?></td>
-		<td><a href="">Ubah</a> | <a href="">Hapus</a></td>
+		<td><a href="">Ubah</a> | <a href="hapus.php?id=<?php echo $row["id"]; ?>">Hapus</a></td>
 		<td><img src="img/<?php echo $row["gambar"] ?>"></td> 
-		<td><?php echo $row["nrp"]?></td>
-		<td><?php echo $row["nama"]?></td>
-		<td><?php echo $row["email"]?></td>
-		<td><?php echo $row["jurusan"]?></td>
+		<td><?php echo $row["nrp"];?></td>
+		<td><?php echo $row["nama"];?></td>
+		<td><?php echo $row["email"];?></td>
+		<td><?php echo $row["jurusan"];?></td>
 	</tr>
 	<?php $i++; ?>
 <?php endforeach; ?>
