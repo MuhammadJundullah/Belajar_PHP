@@ -12,7 +12,12 @@ $table = query("SELECT * FROM mahasiswa");
 
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-<link href="style.css" rel="stylesheet"/>	
+
+<!-- icons -->
+<link rel="icon" type="icon/x-icon" href="https://icons8.com/icon/83326/home" />
+
+<!-- My CSS -->
+<link rel="stylesheet" href="style.css" />
 
 </head>
 
@@ -69,5 +74,13 @@ $table = query("SELECT * FROM mahasiswa");
 		</div>
 	</section>
 	<!-- Akhir Data Mahasiswa -->
+	 
+	<!-- Social Media -->
+	<a class="sosmed" href="https://github.com/MuhammadJundullah/Belajar_PHP/tree/main/crud_db_php%20dengan%20bootstrap%205" target="_blank">
+    <img src="img/github.svg" alt="github" class="github-icon">
+    <span class="github-text">Source Code</span>
+	</a>
+	<!-- Social Media -->
+
 </body>
 </html>
