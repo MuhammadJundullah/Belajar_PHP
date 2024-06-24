@@ -1,0 +1,22 @@
+body {
+  background-color: #e2edff;
+  text-align: center;
+}
+
+.data_mhs {
+  padding-top: 8rem;
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+img {
+  width: 100px;
+}
+
+th {
+  background-color: skyblue;
+}
