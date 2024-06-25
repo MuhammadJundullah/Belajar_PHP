@@ -1,4 +1,4 @@
-Website untuk menyimpan data mahasiswa menggunakan framework bootstrap 5 dan PHP.
+Website untuk mengelola data mahasiswa menggunakan framework bootstrap 5 dan PHP.
 
 Fitur :
 
