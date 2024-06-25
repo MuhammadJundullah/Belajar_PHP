@@ -8,7 +8,7 @@ $table = query("SELECT * FROM mahasiswa");
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Halaman Admin</title>
+	<title>Daftar Data Mahasiswa Unimal</title>
 
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
@@ -65,7 +65,7 @@ $table = query("SELECT * FROM mahasiswa");
 					<td><img src="img/<?php echo $row["photo"]?>" class="rounded"></td> 
 					<td>
 						<button type="button" class="btn btn-secondary"><a style="text-decoration:none;" href="hapus.php?no=<?php echo $row["no"]?>" class="text-light">Hapus</a></button>
-						<button type="button" class="btn btn-primary"><a style="text-decoration:none;" href="ubah.php?no=<?php echo $row["no"]?>" class="text-light">Ubah</a></button>
+						<button type="button" class="btn btn-primary"><a style="text-decoration:none;" href="ubah.php?no=<?php echo $row["no"]?>&nim=<?php echo $row["nim"]?>&nama=<?php echo $row["nama"]?>&alamat=<?php echo $row["alamat"]?>&email=<?php echo $row["email"]?>" class="text-light">Ubah</a></button>
 					</td>
 				</tr>
 			<?php $i ++;?>

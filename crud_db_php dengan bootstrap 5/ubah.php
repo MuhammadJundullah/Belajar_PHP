@@ -3,7 +3,13 @@
 require 'function.php';
 
 $id = $_GET["no"];
+$nim = $_GET["nim"];
+$nama = $_GET["nama"];
+$alamat = $_GET["alamat"];
+$email = $_GET["email"];
+
 if( isset($_POST["tombol"])) {
+
     if( ubah($id, $_POST, $_FILES) > 0) {
         echo 
         "<script>
@@ -60,19 +66,19 @@ if( isset($_POST["tombol"])) {
 					<form method="post" enctype="multipart/form-data">
 					<div class="mb-3">
 						<label for="nim" class="form-label">NIM :</label>
-						<input type="text" class="form-control" name="nim" id="nim">
+						<input type="text" class="form-control" name="nim" id="nim" value="<?php echo $nim; ?>">
 					</div>
 					<div class="mb-3">
 						<label for="nama" class="form-label">Nama :</label>
-						<input type="text" class="form-control" name="nama" id="nama">
+						<input type="text" class="form-control" name="nama" id="nama" value="<?php echo $nama; ?>">
 					</div>
 					<div class="mb-3">
 						<label for="alamat" class="form-label">Alamat :</label>
-						<input type="text" class="form-control" name="alamat" id="alamat">
+						<input type="text" class="form-control" name="alamat" id="alamat" value="<?php echo $alamat; ?>">
 					</div>
 					<div class="mb-3">
 						<label for="email" class="form-label">Email :</label>
-						<input type="text" class="form-control" name="email" id="email">
+						<input type="text" class="form-control" name="email" id="email" value="<?php echo $email; ?>">
 					</div>
 					<div class="mb-3">
 						<label for="foto" class="form-label">Upload Foto Mahasiswa :</label>
