@@ -1,5 +1,12 @@
 <?php 
 
+session_start();
+
+if (!isset($_SESSION['login'])) {
+	header("Location: login.php");
+	exit;
+}
+
 require 'function.php';
 
 $id = $_GET["no"];
@@ -7,6 +14,7 @@ $nim = $_GET["nim"];
 $nama = $_GET["nama"];
 $alamat = $_GET["alamat"];
 $email = $_GET["email"];
+$foto = $_GET["foto"];
 
 if( isset($_POST["tombol"])) {
 
@@ -64,6 +72,7 @@ if( isset($_POST["tombol"])) {
 			<div class="row justify-content-center">
 				<div class="col-4 align-self-center">
 					<form method="post" enctype="multipart/form-data">
+            <input type="hidden" name="gambarLama" value="<?php echo $foto; ?>">
 					<div class="mb-3">
 						<label for="nim" class="form-label">NIM :</label>
 						<input type="text" class="form-control" name="nim" id="nim" value="<?php echo $nim; ?>">
@@ -81,7 +90,8 @@ if( isset($_POST["tombol"])) {
 						<input type="text" class="form-control" name="email" id="email" value="<?php echo $email; ?>">
 					</div>
 					<div class="mb-3">
-						<label for="foto" class="form-label">Upload Foto Mahasiswa :</label>
+						<label for="foto" class="form-label">Perbarui Foto Mahasiswa :</label>
+            <br><img class="rounded mb-3" src="img/<?php echo $foto;?>" alt="Foto sebelumnya">
 						<input type="file" class="form-control" name="foto" id="foto">
 					</div>
 					<button type="submit" class="btn btn-primary" name="tombol">Submit</button>
@@ -93,3 +103,4 @@ if( isset($_POST["tombol"])) {
 	<!-- Akhir Data Mahasiswa -->
 </body>
 </html>
+

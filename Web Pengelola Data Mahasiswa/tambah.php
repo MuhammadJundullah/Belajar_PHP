@@ -1,19 +1,21 @@
 <?php 
+
+session_start();
+
+if (!isset($_SESSION['login'])) {
+	header("Location: login.php");
+	exit;
+}
+
 require 'function.php';
 
 if( isset($_POST["tombol"])) {
     if( tambah($_POST, $_FILES) > 0) {
         echo 
-        "<script>
-        alert ('Data berhasil ditambahkan!');
-        document.location.href = 'index.php';
-        </script>";
+        "<script> alert ('Data berhasil ditambahkan!'); document.location.href = 'index.php'; </script>";
     } else {
         echo 
-        "<script>
-        alert ('Data gagal ditambahkan!');
-        document.location.href = 'index.php';
-        </script>";
+        "<script> alert ('Data gagal ditambahkan!'); document.location.href = 'index.php'; </script>";
     }
 }
 ?>
@@ -57,30 +59,33 @@ if( isset($_POST["tombol"])) {
 				<div class="col-4 align-self-center">
 					<form method="post" enctype="multipart/form-data">
 					<div class="mb-3">
-						<label for="no" class="form-label">Nomor :</label>
-						<input type="text" class="form-control" name="no" id="no">
-					</div>
-					<div class="mb-3">
-						<label for="nim" class="form-label">NIM :</label>
-						<input type="text" class="form-control" name="nim" id="nim">
-					</div>
-					<div class="mb-3">
-						<label for="nama" class="form-label">Nama :</label>
-						<input type="text" class="form-control" name="nama" id="nama">
-					</div>
-					<div class="mb-3">
-						<label for="alamat" class="form-label">Alamat :</label>
-						<input type="text" class="form-control" name="alamat" id="alamat">
-					</div>
-					<div class="mb-3">
-						<label for="email" class="form-label">Email :</label>
-						<input type="text" class="form-control" name="email" id="email">
-					</div>
-					<div class="mb-3">
-						<label for="foto" class="form-label">Upload Foto Mahasiswa :</label>
+					<div class="input-group mb-4">
+						<label for="no" class="form-label me-2">No :</label>
+						<input type="text" class="form-control" name="no" id="no">	
+    				</div>
+					<div class="input-group mb-4">
+						<label for="nim" class="form-label me-2">NIM :</label>
+						<input type="text" class="form-control" name="nim" id="nim">	
+    				</div>
+					<div class="input-group mb-4">
+						<label for="nama" class="form-label me-2">Nama :</label>
+						<input type="text" class="form-control" name="nama" id="nama">	
+    				</div>
+					<div class="input-group mb-4">
+						<label for="alamat" class="form-label me-2">Alamat :</label>
+						<input type="text" class="form-control" name="alamat" id="alamat">	
+    				</div>
+					<div class="input-group mb-4">
+						<label for="email" class="form-label me-2">Email :</label>
+						<input type="text" class="form-control" name="email" id="email">	
+    				</div>
+			
+					<div>
+						<label for="foto" class="form-label me-2">Upload Foto Mahasiswa : </label>
 						<input type="file" class="form-control" name="foto" id="foto">
+						<p class="text-secondary">Format jpg, jpeg dan png dengan size maks. 2MB</p>
 					</div>
-					<button type="submit" class="btn btn-primary" name="tombol">Submit</button>
+					<button type="submit" class="btn btn-primary" name="tombol">Tambah Data</button>
 					</form>
 				</div>
 			</div>
