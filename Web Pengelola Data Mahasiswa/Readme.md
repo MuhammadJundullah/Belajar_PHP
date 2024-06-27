@@ -1,7 +1,7 @@
 Website untuk menyimpan data mahasiswa menggunakan framework bootstrap 5, PHP dan Mysql.<br>
 Username : admin<br>
 password : 123<br>
-<p>Kunjungi Website <a href="http://muhammadjundullah.great-site.net/index.php" target="_blank">disini</a></p>
+<p>Kunjungi Website <a href="http://muhammadjundullah.great-site.net/index.php" target="_blank">disini</a>.</p>
 
 Pages :
 
