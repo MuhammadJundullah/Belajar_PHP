@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-$_SESSION = []; 
+$_SESSION = [];
 session_unset();
 session_destroy();
 

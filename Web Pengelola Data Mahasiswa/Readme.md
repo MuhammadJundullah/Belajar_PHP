@@ -1,12 +1,12 @@
-Website untuk mengelola data mahasiswa menggunakan CSS framework Bootstrap 5, PHP dan MYSQL.
+Website untuk menyimpan data mahasiswa menggunakan framework bootstrap 5 dan PHP.
 
 Fitur :
 
-- Menampilkan daftar data mahasiswa beserta fitur ubah dan hapus data.
+- Menampilkan daftar data mahasiswa.
   <img src="view/Daftar.png">
 
-- Menambahkan data mahasiswa termasuk upload foto mahasiswa.
+- Menambahkan data mahasiswa termasuk upload gambar.
   <img src="view/Tambah.png">
 
-- Mengubah data mahasiswa.
+- Mengubah data mahasiswa dan menghapus data mahasiswa.
   <img src="view/Ubah.png">

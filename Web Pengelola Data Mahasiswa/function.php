@@ -24,7 +24,7 @@
 			return false;
 		}
 	
-		$query = "INSERT INTO mahasiswa VALUES ('$no','$nim','$nama','$alamat','$email','$foto')";
+		$query = "INSERT INTO mahasiswa VALUES (NULL,'$nim','$nama','$alamat','$email','$foto')";
 			mysqli_query($conn, $query);
 	
 

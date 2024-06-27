@@ -45,10 +45,10 @@ if( isset($_POST["cari"])) {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-				<div class="btn btn-primary m-2"><a class="nav-link text-light" href="tambah.php">Tambahkan Data</a></div>
+				<a class="nav-link" href="tambah.php">Tambahkan Data >></a>
             </li>
             <li class="nav-item">
-				<div class="btn btn-secondary m-2"><a class="nav-link text-light" href="logout.php">Log Out</a></div>
+				<a class="nav-link ms-5" href="logout.php">Log Out</a>
             </li>
           </ul>
         </div>
@@ -109,6 +109,10 @@ if( isset($_POST["cari"])) {
     <span class="github-text">Source Code</span>
 	</a>
 	<!-- Akhir Social Media -->
+
+	<!-- Footer -->
+	<p style="margin-bottom: -1px; padding-top: 1rem" class="text-secondary small text-center">© 2024 Ahmad. All right reserved</p>
+	<!-- Footer -->
 
 </body>
 </html>

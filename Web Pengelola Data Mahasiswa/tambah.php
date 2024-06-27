@@ -60,10 +60,6 @@ if( isset($_POST["tombol"])) {
 					<form method="post" enctype="multipart/form-data">
 					<div class="mb-3">
 					<div class="input-group mb-4">
-						<label for="no" class="form-label me-2">No :</label>
-						<input type="text" class="form-control" name="no" id="no">	
-    				</div>
-					<div class="input-group mb-4">
 						<label for="nim" class="form-label me-2">NIM :</label>
 						<input type="text" class="form-control" name="nim" id="nim">	
     				</div>
