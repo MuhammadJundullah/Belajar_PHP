@@ -1,48 +1,53 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 class produk {
     public $judul,
            $penulis,
            $penerbit,
            $harga,
            $jmlHalaman,
-           $waktuMain,
-           $tipe;
+           $waktuMain;
 
-    public function __construct($judul = "-", $penulis = "-", $penerbit = "-", $harga = "-", $jmlHalaman="-", $waktuMain="-", $tipe = "-") {
+    public function __construct($judul = "-", $penulis = "-", $penerbit = "-", $harga = "-", $jmlHalaman="-", $waktuMain="-") {
         $this->judul = $judul;
         $this->penulis = $penulis;
         $this->penerbit = $penerbit;
         $this->harga = $harga;
         $this->jmlHalaman = $jmlHalaman;
         $this->waktuMain = $waktuMain;
-        $this->tipe = $tipe;
     }
     
     public function getlable() {
         return  "$this->penulis, $this->penerbit";
     }
 
-    public function GetInfoLengkap() {
-        $str = "{$this->tipe} : {$this->judul} | {$this->getlable()} | Rp. {$this->harga}";
-        if ( $this->tipe == "komik") {
-            $str .= " | {$this->jmlHalaman} halaman.";
-        } else if ( $this->tipe == "game") {
-            $str .= " | {$this->waktuMain} jam.";
-        }
+    public function GetInfoProduk() {
+        $str = "{$this->judul} | {$this->getlable()} | Rp. {$this->harga}";
         return $str;
     }
 
 }
 
-class CetakInfoProduct {
-    public function cetak( produk $produk ) {
-        $str = "{$produk->judul} | {$produk->getlable()} (Rp. {$produk->harga})";
+class komik extends produk {
+    public function GetInfoProduk(){
+        $str = "Komik : {$this->judul} | {$this->getlable()} | Rp. {$this->harga} - {$this->jmlHalaman} halaman.";
         return $str;
     }
 }
 
-$produk1 = new produk("naruto", "masashi kashimoto", "shounen jump", 30000, "100", 0, "komik");
-$produk2 = new produk("uncharted", "neil druckmann", "sony computer", 250000, 0, "50", "game");
+class game extends produk {
+    public function GetInfoProduk(){
+        $str = "Game : {$this->judul} | {$this->getlable()} | Rp. {$this->harga} ~ {$this->waktuMain} jam.";
+        return $str;
+    }
+}
 
-echo $produk1->GetInfoLengkap();
+$produk1 = new komik("Naruto", "Masashi Kashimoto", "Shunen Jump", 30000, "100");
+$produk2 = new game("Uncharted", "Neil Druckmann", "Sony Computer", 250000, "0", "50");
+
+echo $produk1->GetInfoProduk();
+echo "<br>";
+echo $produk2->GetInfoProduk();
