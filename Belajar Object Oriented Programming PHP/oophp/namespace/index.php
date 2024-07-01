@@ -12,7 +12,13 @@ $cetakProduk = new CetakInfoProduk;
 $cetakProduk->tambahProduk($produk1);
 $cetakProduk->tambahProduk($produk2);
 echo $cetakProduk->cetak();
+echo "<br>";
 
-new App\Produk\User;
+use App\Service\User as serviceUser;
+use App\Produk\User as produkUser;
+
+new serviceUser;
+echo "<br>";
+new produkUser;
 
 ?>
