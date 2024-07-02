@@ -88,5 +88,10 @@ if( isset($_POST["tombol"])) {
 		</div>
 	</section>
 	<!-- Akhir Data Mahasiswa -->
+
+	<!-- Footer -->
+	<p style="margin-bottom: -1px; padding-top: 13rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
+	<!-- Footer -->
+
 </body>
 </html>

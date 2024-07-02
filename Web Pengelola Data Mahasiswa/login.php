@@ -66,10 +66,7 @@ if (isset($_POST['masuk'])) {
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-sm fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Halaman Login</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="navbar-brand" href="login.php">Website Pengelola Data Mahasiswa</a>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -85,31 +82,38 @@ if (isset($_POST['masuk'])) {
 	<section class="mt-5 pt-5">
 		<div class="container">
 			<div class="row justify-content-center">
-                <h1 class="mb-5 text-secondary">Masuk sebagai Admin</h1>
-				<div class="col-4 align-self-center">
-                    <?php if (isset($error)) : ?>
-                        <p style="color: red; font-style: italic;" >Username atau Password tidak sesuai !</p>    
-                    <?php endif; ?>
-                <form actions="" method="post">
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Username :</label>
-                        <input type="username" class="form-control" id="username" name="username" autofocus>
+                <div class="mt-5 shadow-lg card bg-primary-subtle" style="width: 55rem; height: 30rem;">
+                    <h1 class="mb-5 mt-5 text-secondary">Masuk Sebagai Pengelola Data</h1>
+                    <div class="col-4 align-self-center">
+                        <?php if (isset($error)) : ?>
+                            <p style="color: red; font-style: italic;" >Username atau Password tidak sesuai !</p>    
+                        <?php endif; ?>
+                        <form actions="" method="post">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username :</label>
+                                <input type="username" class="form-control" id="username" name="username" autofocus>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password :</label>
+                                <input type="password" class="form-control" id="password" name="password">
+                            </div>
+                            <div class="mb-3 form-check d-flex align-items-center">
+                                <input type="checkbox" class="form-check-input me-2" id="remember" name="remember">
+                                <label class="form-check-label" for="remember">Ingat Saya</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary" name="masuk">Masuk</button>
+                        </form>
                     </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password :</label>
-                        <input type="password" class="form-control" id="password" name="password">
-                    </div>
-                    <div class="mb-3 form-check d-flex align-items-center">
-                        <input type="checkbox" class="form-check-input me-2" id="remember" name="remember">
-                        <label class="form-check-label" for="remember">Ingat Saya</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary" name="masuk">Masuk</button>
-                    </form>
-				</div>
+                </div>
 			</div>
 		</div>
 	</section>
 	<!-- Akhir Login Form -->
+
+    <!-- Footer -->
+    <p style="margin-bottom: -1px; padding-top: 10rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
+    <!-- Footer -->
+
 </body>
 </html>
 

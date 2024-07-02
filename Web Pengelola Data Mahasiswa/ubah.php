@@ -94,13 +94,18 @@ if( isset($_POST["tombol"])) {
             <br><img class="rounded mb-3" src="img/<?php echo $foto;?>" alt="Foto sebelumnya">
 						<input type="file" class="form-control" name="foto" id="foto">
 					</div>
-					<button type="submit" class="btn btn-primary" name="tombol">Submit</button>
+					<button type="submit" class="btn btn-primary" name="tombol">Ubah</button>
 					</form>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- Akhir Data Mahasiswa -->
+
+  <!-- Footer -->
+  <p style="margin-bottom: -1px; padding-top: 2rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
+  <!-- Footer -->
+
 </body>
 </html>
 

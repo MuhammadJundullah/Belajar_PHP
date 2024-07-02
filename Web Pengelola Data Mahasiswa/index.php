@@ -71,7 +71,7 @@ if( isset($_POST["cari"])) {
 		</form>
 		<!-- Alkir Search -->
 		 
-		<table class="table table-striped-columns">
+		<table class="table table-striped-columns" style="margin-left: 3px;">
 			<tr> 
 				<th>No</th>
 				<th>NIM</th>
@@ -92,8 +92,8 @@ if( isset($_POST["cari"])) {
 					<td><?php echo $row["email"]?></td>
 					<td><img src="img/<?php echo $row["photo"]?>" class="rounded"></td> 
 					<td>
-						<button type="button" class="btn btn-secondary"><a style="text-decoration:none;" href="hapus.php?no=<?php echo $row["no"]?>" class="text-light">Hapus</a></button>
-						<button type="button" class="btn btn-primary"><a style="text-decoration:none;" href="ubah.php?no=<?php echo $row["no"]?>&nim=<?php echo $row["nim"]?>&nama=<?php echo $row["nama"]?>&alamat=<?php echo $row["alamat"]?>&email=<?php echo $row["email"]?>&foto=<?php echo $row["photo"]?>" class="text-light">Ubah</a></button>
+						<button type="button" class="btn btn-secondary"><a style="text-decoration: none;" href="hapus.php?no=<?php echo $row["no"]?>" class="text-light">Hapus</a></button>
+						<button type="button" class="btn btn-primary" style="margin-left: 5px;"><a style="text-decoration: none;" href="ubah.php?no=<?php echo $row["no"]?>&nim=<?php echo $row["nim"]?>&nama=<?php echo $row["nama"]?>&alamat=<?php echo $row["alamat"]?>&email=<?php echo $row["email"]?>&foto=<?php echo $row["photo"]?>" class="text-light">Ubah</a></button>
 					</td>
 				</tr>
 			<?php $i ++;?>
@@ -104,14 +104,14 @@ if( isset($_POST["cari"])) {
 	<!-- Akhir Data Mahasiswa -->
 	 
 	<!-- Social Media -->
-	<a class="sosmed" href="https://github.com/MuhammadJundullah/Belajar_PHP/tree/main/Web%20Pengelola%20Data%20Mahasiswa" target="_blank">
+	<a class="sosmed" href="https://github.com/MuhammadJundullah/Belajar_PHP/tree/main/Web%20Pengelola%20Data%20Mahasiswa" target="_blank" style="margin-left: 25px;">
     <img src="img/github.svg" alt="github" class="github-icon">
     <span class="github-text">Source Code</span>
 	</a>
 	<!-- Akhir Social Media -->
 
 	<!-- Footer -->
-	<p style="margin-bottom: -1px; padding-top: 1rem" class="text-secondary small text-center">© 2024 Ahmad. All right reserved</p>
+	<p style="margin-bottom: -1px; padding-top: 3rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
 	<!-- Footer -->
 
 </body>

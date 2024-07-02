@@ -35,7 +35,7 @@ if ( isset($_POST['register']) ) {
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-sm fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Halaman Daftar</a>
+        <a class="navbar-brand" href="registrasi.php">Website Pengelola Data Mahasiswa</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -54,7 +54,8 @@ if ( isset($_POST['register']) ) {
 	<section class="mt-5 pt-5">
 		<div class="container">
 			<div class="row justify-content-center">
-                <h1 class="mb-5 text-secondary">Daftar sebagai Admin</h1>
+            <div class="shadow-lg card bg-primary-subtle mt-5" style="width: 55rem; height: 35rem;">
+                <h1 class="mb-5 mt-5 text-secondary">Daftar Sebagai Pengelola Data</h1>
 				<div class="col-4 align-self-center">
                 <form actions="" method="post">
                     <div class="mb-3">
@@ -72,10 +73,16 @@ if ( isset($_POST['register']) ) {
                     <button type="submit" class="btn btn-primary" name="register">Daftar</button>
                     </form>
 				</div>
+                </div>
 			</div>
 		</div>
 	</section>
 	<!-- Akhir Register Form -->
+
+    <!-- Footer -->
+    <p style="margin-bottom: -1px; padding-top: 5rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
+    <!-- Footer -->
+
 </body>
 </html>
 
