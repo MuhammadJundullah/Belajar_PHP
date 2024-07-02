@@ -26,5 +26,5 @@ Fitur :
 - Menambahkan data mahasiswa termasuk upload gambar.
   <img src="view/Tambah.png">
 
-- Mengubah data mahasiswa dan menghapus data mahasiswa.
+- Mengubah data mahasiswa.
   <img src="view/Ubah.png">
