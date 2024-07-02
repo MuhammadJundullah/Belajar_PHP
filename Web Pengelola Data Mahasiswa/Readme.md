@@ -9,8 +9,8 @@ Website untuk mengelola data mahasiswa menggunakan Mysql Database, PHP dan Boots
 Link Hosting : http://muhammadjundullah.great-site.net
 
 Username dan Password untuk masuk sebagai pengelola
-Username : admin
-Password : 123
+<br>Username : admin
+<br>Password : 123
 
 Fitur :
 
