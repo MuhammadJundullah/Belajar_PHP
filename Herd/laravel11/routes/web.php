@@ -3,11 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', ["title" => "Home"]);
 });
 
 Route::get('/about', function () {
-    return view('about', ["nama" => "Sayid Muhammad Jundullah"]);
+    return view('about', ["title" => "About"]);
 });
 
 Route::get('/welcome', function () {
@@ -15,9 +15,9 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/blog', function () {
-    return view('blog');
+    return view('blog', ["title" => "Blog"]);
 });
 
 Route::get('/contact', function () {
-    return view('contact', ["email" => "Sayidmuhammad15@gmail.com"], ["instagram" => "saed.m_"]);
+    return view('contact', ["title" => "Contact"]);
 });

@@ -33,10 +33,11 @@ if( isset($_POST["tombol"])) {
 
 </head>
 
-<body>
+<body class="bg-success-subtle">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
       <div class="container">
+	  <img style="width: 50px; margin-right: 20px" src="../img/unimal.png" alt="logo unimal">
         <a class="navbar-brand" href="#">Tambah Data Kelas</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -54,19 +55,19 @@ if( isset($_POST["tombol"])) {
 
 	<!-- Tambah Data Mahasiswa -->
 	<section class="data_mhs">
-		<div class="container">
+		<div class="container mt-5 pt-5">
 			<div class="row justify-content-center">
 				<div class="col-4 align-self-center">
 				<form method="post">
 					<div class="mb-3">
-						<label for="kode" class="form-label">Kode Kelas :</label>
+						<label for="kode" class="form-label text-dark">Kode Kelas :</label>
 						<input type="text" class="form-control" name="kode" id="kode"autofocus >
 					</div>
 					<div class="mb-3">
-						<label for="nama" class="form-label">Nama Kelas :</label>
+						<label for="nama" class="form-label text-dark">Nama Kelas :</label>
 						<input type="text" class="form-control" name="nama" id="nama">
 					</div>	
-					<button type="submit" class="btn btn-primary" name="tombol">Tambah</button>
+					<button type="submit" class="btn btn-success" name="tombol">Tambah</button>
 					</form>
 				</div>
 			</div>

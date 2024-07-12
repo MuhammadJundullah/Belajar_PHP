@@ -34,10 +34,11 @@ if( isset($_POST["cari"])) {
 
 </head>
 
-<body>
+<body class="bg-light">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
       <div class="container">
+	  <img style="width: 50px; margin-right: 20px" src="img/unimal.png" alt="unimal">
         <a class="navbar-brand" href="#">Daftar Data Mahasiswa</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -57,7 +58,7 @@ if( isset($_POST["cari"])) {
 				<a class="nav-link" href="kelas/kelas.php">Kelas</a>
             </li>
             <li class="nav-item ms-3">
-				<a class="nav-link text-primary fw-bold" href="index.php">Mahasiswa</a>
+				<a class="nav-link text-success fw-bold" href="index.php">Mahasiswa</a>
             </li>
             <li class="nav-item">
 				<a class="nav-link ms-5" href="logout.php">Log Out</a>
@@ -79,14 +80,14 @@ if( isset($_POST["cari"])) {
 			<form action="" method="post">
 					<div class="input-group mb-3">
 						<input type="text" class="form-control" name="keyword" placeholder="Cari Data" autocomplete="off" autofocus>
-						<button class="btn btn-primary" type="submit" name="cari">Cari</button>
+						<button class="btn btn-success" type="submit" name="cari">Cari</button>
 					</div>
 			</form>
 			<!-- Alkir Search -->
 
 		</div>
 	<div class="col text-end">
-		<button class="btn btn-primary" type="submit" name="cari">
+		<button class="btn btn-success" type="submit" name="cari">
 			<a class="nav-link" href="tambah.php">Tambahkan Data >></a>
 		</button>
 	</div>
@@ -94,7 +95,7 @@ if( isset($_POST["cari"])) {
 
 
 		 
-		<table class="table table-striped-columns" style="margin-left: 3px;">
+		<table class="table table-striped table-hover table-bordered border-light" style="margin-left: 3px;">
 			<tr> 
 				<th>No</th>
 				<th>NIM</th>
@@ -115,8 +116,8 @@ if( isset($_POST["cari"])) {
 					<td><?php echo $row["email"]?></td>
 					<td><img src="img/<?php echo $row["photo"]?>" class="rounded"></td> 
 					<td>
-						<button type="button" class="btn btn-secondary"><a style="text-decoration: none;" href="hapus.php?no=<?php echo $row["no"]?>" class="text-light">Hapus</a></button>
-						<button type="button" class="btn btn-primary" style="margin-left: 5px;"><a style="text-decoration: none;" href="ubah.php?no=<?php echo $row["no"]?>&nim=<?php echo $row["nim"]?>&nama=<?php echo $row["nama"]?>&alamat=<?php echo $row["alamat"]?>&email=<?php echo $row["email"]?>&foto=<?php echo $row["photo"]?>" class="text-light">Ubah</a></button>
+						<button type="button" class="btn btn-danger"><a style="text-decoration: none;" href="hapus.php?no=<?php echo $row["no"]?>" class="text-light">Hapus</a></button>
+						<button type="button" class="btn btn-success" style="margin-left: 5px;"><a style="text-decoration: none;" href="ubah.php?no=<?php echo $row["no"]?>&nim=<?php echo $row["nim"]?>&nama=<?php echo $row["nama"]?>&alamat=<?php echo $row["alamat"]?>&email=<?php echo $row["email"]?>&foto=<?php echo $row["photo"]?>" class="text-light">Ubah</a></button>
 					</td>
 				</tr>
 			<?php $i ++;?>
@@ -134,7 +135,7 @@ if( isset($_POST["cari"])) {
 	<!-- Akhir Social Media -->
 
 	<!-- Footer -->
-	<p style="margin-bottom: -1px; padding-top: 6rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
+	<p style="margin-bottom: -1px; padding-top: 6rem" class="text-dark small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
 	<!-- Footer -->
 
 </body>

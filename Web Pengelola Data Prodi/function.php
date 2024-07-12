@@ -15,25 +15,7 @@ ini_set('display_errors', 1);
 		return $rows;
 	}
 
-	function tambah($data, $files) {
-		global $conn;
-		$no = htmlspecialchars($data["no"]);
-		$nim = htmlspecialchars($data["nim"]);
-		$nama = htmlspecialchars($data["nama"]);
-		$alamat = htmlspecialchars($data["alamat"]);
-		$email = htmlspecialchars($data["email"]);
-		
-		$foto = upload();
-		if (!$foto) {
-			return false;
-		}
-	
-		$query = "INSERT INTO mahasiswa VALUES (NULL,'$nim','$nama','$alamat','$email','$foto')";
-			mysqli_query($conn, $query);
-	
 
-		return mysqli_affected_rows($conn);
-	}
 
 	function tambahmk($data) {
 		global $conn;
@@ -56,6 +38,26 @@ ini_set('display_errors', 1);
 		$query = "INSERT INTO Dosen (kode_dosen, nama_dosen, email) VALUES ('$kode', '$nama', '$email')";
 			mysqli_query($conn, $query);
 	
+		return mysqli_affected_rows($conn);
+	}
+
+	function tambah($data, $files) {
+		global $conn;
+		$no = htmlspecialchars($data["no"]);
+		$nim = htmlspecialchars($data["nim"]);
+		$nama = htmlspecialchars($data["nama"]);
+		$alamat = htmlspecialchars($data["alamat"]);
+		$email = htmlspecialchars($data["email"]);
+		
+		$foto = upload();
+		if (!$foto) {
+			return false;
+		}
+	
+		$query = "INSERT INTO mahasiswa VALUES (NULL,'$nim','$nama','$alamat','$email','$foto')";
+			mysqli_query($conn, $query);
+	
+
 		return mysqli_affected_rows($conn);
 	}
 

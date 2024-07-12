@@ -33,10 +33,11 @@ if( isset($_POST["cari"])) {
 
 </head>
 
-<body>
+<body class=bg-light>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
       <div class="container">
+	  <img style="width: 50px; margin-right: 20px" src="../img/unimal.png" alt="unimal">
         <a class="navbar-brand" href="#">Daftar Kelas</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -53,7 +54,7 @@ if( isset($_POST["cari"])) {
 				<a class="nav-link" href="../matakuliah/matakuliah.php">Mata Kuliah</a>
             </li>
             <li class="nav-item ms-3">
-				<a class="nav-link text-primary fw-bold" href="kelas.php">Kelas</a>
+				<a class="nav-link text-success fw-bold" href="kelas.php">Kelas</a>
             </li>
             <li class="nav-item ms-3">
 				<a class="nav-link" href="../index.php">Mahasiswa</a>
@@ -78,20 +79,20 @@ if( isset($_POST["cari"])) {
 			<form action="" method="post">
 				<div class="input-group mb-3">
 					<input type="text" class="form-control" name="keyword" placeholder="Cari Data" autocomplete="off" autofocus>
-					<button class="btn btn-primary" type="submit" name="cari">Cari</button>
+					<button class="btn btn-success" type="submit" name="cari">Cari</button>
 				</div>
 			</form>
 			<!-- Alkir Search -->
 
 		</div>
 	<div class="col text-end">
-		<button class="btn btn-primary" type="submit" name="cari">
+		<button class="btn btn-success" type="submit" name="cari">
 			<a class="nav-link" href="tambah.php">Tambahkan Data >></a>
 		</button>
 	</div>
 	</div>
 		 
-		<table class="table table-striped-columns" style="margin-left: 3px;">
+		<table class="table table-striped table-hover table-bordered border-light" style="margin-left: 3px;">
 			<tr> 
 				<th>No</th>
 				<th>Kode Kelas</th>
@@ -106,8 +107,8 @@ if( isset($_POST["cari"])) {
 					<td><?php echo $row["kode_kelas"]?></td>
 					<td><?php echo $row["nama_kelas"]?></td>
 					<td>
-						<button type="button" class="btn btn-secondary"><a style="text-decoration: none;" href="hapus.php?id=<?php echo $row["id"]?>" class="text-light">Hapus</a></button>
-						<button type="button" class="btn btn-primary" style="margin-left: 5px;"><a style="text-decoration: none;" href="ubah.php?id=<?php echo $row["id"]?>&kode=<?php echo $row["kode_kelas"]?>&nama=<?php echo $row["nama_kelas"]?>" class="text-light">Ubah</a></button>
+						<button type="button" class="btn btn-danger"><a style="text-decoration: none;" href="hapus.php?id=<?php echo $row["id"]?>" class="text-light">Hapus</a></button>
+						<button type="button" class="btn btn-success" style="margin-left: 5px;"><a style="text-decoration: none;" href="ubah.php?id=<?php echo $row["id"]?>&kode=<?php echo $row["kode_kelas"]?>&nama=<?php echo $row["nama_kelas"]?>" class="text-light">Ubah</a></button>
 					</td>
 				</tr>
 			<?php $i ++;?>

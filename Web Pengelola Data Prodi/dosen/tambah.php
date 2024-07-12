@@ -33,11 +33,12 @@ if( isset($_POST["tombol"])) {
 
 </head>
 
-<body>
+<body class="bg-success-subtle">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-sm fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Tambah Data Dosen</a>
+	  <img style="width: 50px; margin-right: 20px" src="../img/unimal.png" alt="logo unimal">
+        <a class="navbar-brand" href="tambah.php">Tambah Data Dosen</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -55,7 +56,7 @@ if( isset($_POST["tombol"])) {
 	<!-- Tambah Data Mahasiswa -->
 	<section class="data_mhs">
 		<div class="container">
-			<div class="row justify-content-center">
+			<div class="row justify-content-center mt-5 pt-5">
 				<div class="col-4 align-self-center">
 				<form method="post">
 					<div class="mb-3">
@@ -70,7 +71,7 @@ if( isset($_POST["tombol"])) {
 						<label for="email" class="form-label">Bidang Konsentrasi :</label>
 						<input type="text" class="form-control" name="email" id="email">
 					</div>		
-					<button type="submit" class="btn btn-primary" name="tombol">Tambah</button>
+					<button type="submit" class="btn btn-success" name="tombol">Tambah</button>
 					</form>
 				</div>
 			</div>
@@ -79,7 +80,7 @@ if( isset($_POST["tombol"])) {
 	<!-- Akhir Data Mahasiswa -->
 
 	<!-- Footer -->
-	<p style="margin-bottom: -1px; padding-top: 13rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
+	<p style="margin-bottom: -1px; padding-top: 15rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
 	<!-- Footer -->
 
 </body>

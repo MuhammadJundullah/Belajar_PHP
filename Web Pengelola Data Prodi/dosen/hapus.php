@@ -11,7 +11,7 @@ require '../function.php';
 
 $id = $_GET["id"];
 
-if (hapusdosen($id) > 0) {
+if (hapusDosen($id) > 0) {
     echo 
     "<script>
     alert ('Data berhasil dihapus!');

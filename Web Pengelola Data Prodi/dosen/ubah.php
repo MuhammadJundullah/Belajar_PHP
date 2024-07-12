@@ -44,10 +44,11 @@ if( isset($_POST["tombol"])) {
 <link href="../style.css" rel="stylesheet"/>	
 </head>
 
-<body>
+<body class="bg-success-subtle">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-sm fixed-top">
       <div class="container">
+      <img style="width: 50px; margin-right: 20px" src="../img/unimal.png" alt="logo unimal">
         <a class="navbar-brand" href="ubah.php">Ubah Data Dosen</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -81,7 +82,7 @@ if( isset($_POST["tombol"])) {
 						<label for="sks" class="form-label">Bidang Konsentrasi :</label>
 						<input type="text" class="form-control" name="email" id="email" value="<?php echo $email; ?>">
 					</div>
-					<button type="submit" class="btn btn-primary" name="tombol">Ubah</button>
+					<button type="submit" class="btn btn-success" name="tombol">Ubah</button>
 					</form>
 				</div>
 			</div>
@@ -90,7 +91,7 @@ if( isset($_POST["tombol"])) {
 	<!-- Akhir Data Mahasiswa -->
 
   <!-- Footer -->
-  <p style="margin-bottom: -1px; padding-top: 2rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
+  <p style="margin-bottom: -1px; padding-top: 15rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
   <!-- Footer -->
 
 </body>

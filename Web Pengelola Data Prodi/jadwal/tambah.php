@@ -37,11 +37,12 @@ if( isset($_POST["tombol"])) {
 
 </head>
 
-<body>
+<body class="bg-success-subtle">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-sm fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Tambah Data Jadwal Perkuliahan</a>
+	  <img style="width: 50px; margin-right: 20px" src="../img/unimal.png" alt="logo unimal">
+        <a class="navbar-brand" href="tambah.php">Tambah Data Jadwal Perkuliahan</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -107,7 +108,7 @@ if( isset($_POST["tombol"])) {
 						<label for="nama" class="form-label">Jam Selesai :</label>
 						<input type="text" class="form-control" name="jam_selesai" id="nama" placeholder="00:00">
 					</div>	
-					<button type="submit" class="btn btn-primary" name="tombol">Tambah</button>
+					<button type="submit" class="btn btn-success" name="tombol">Tambah</button>
 				</Form>
 				</div>
 			</div>

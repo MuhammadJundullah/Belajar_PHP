@@ -33,10 +33,11 @@ if( isset($_POST["tombol"])) {
 
 </head>
 
-<body>
+<body class="bg-success-subtle">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
       <div class="container">
+	  <img style="width: 50px; margin-right: 20px" src="img/unimal.png" alt="logo unimal">
         <a class="navbar-brand" href="#">Tambah Data Mahasiswa</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -55,33 +56,33 @@ if( isset($_POST["tombol"])) {
 	<!-- Tambah Data Mahasiswa -->
 	<section class="data_mhs">
 		<div class="container">
-			<div class="row justify-content-center">
+			<div class="row justify-content-center mt-5 pt-5">
 				<div class="col-4 align-self-center">
 					<form method="post" enctype="multipart/form-data">
 					<div class="mb-3">
 					<div class="input-group mb-4">
-						<label for="nim" class="form-label me-2">NIM :</label>
+						<label for="nim" class="form-label me-2 text-dark">NIM :</label>
 						<input type="text" class="form-control" name="nim" id="nim">	
     				</div>
 					<div class="input-group mb-4">
-						<label for="nama" class="form-label me-2">Nama :</label>
+						<label for="nama" class="form-label me-2 text-dark">Nama :</label>
 						<input type="text" class="form-control" name="nama" id="nama">	
     				</div>
 					<div class="input-group mb-4">
-						<label for="alamat" class="form-label me-2">Alamat :</label>
+						<label for="alamat" class="form-label me-2 text-dark">Alamat :</label>
 						<input type="text" class="form-control" name="alamat" id="alamat">	
     				</div>
 					<div class="input-group mb-4">
-						<label for="email" class="form-label me-2">Email :</label>
+						<label for="email" class="form-label me-2 text-dark">Email :</label>
 						<input type="text" class="form-control" name="email" id="email">	
     				</div>
 			
 					<div>
-						<label for="foto" class="form-label me-2">Upload Foto Mahasiswa : </label>
+						<label for="foto" class="form-label me-2 text-dark">Upload Foto Mahasiswa : </label>
 						<input type="file" class="form-control" name="foto" id="foto">
 						<p class="text-secondary">Format jpg, jpeg dan png dengan size maks. 2MB</p>
 					</div>
-					<button type="submit" class="btn btn-primary" name="tombol">Tambah Data</button>
+					<button type="submit" class="btn btn-success" name="tombol">Tambah Data</button>
 					</form>
 				</div>
 			</div>

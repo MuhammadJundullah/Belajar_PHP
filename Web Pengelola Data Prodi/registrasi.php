@@ -29,13 +29,39 @@ if ( isset($_POST['register']) ) {
     <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 <link href="style.css" rel="stylesheet"/>	
+<style>
+        body {
+            background-image: url('img/bgunimal.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+    }
+    
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: inherit;
+            background-size: inherit;
+            background-repeat: inherit;
+            background-attachment: inherit;
+            background-position: inherit;
+            filter: grayscale(30%);
+            z-index: -1;
+    }
+    </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="registrasi.php">Website Pengelola Data Mahasiswa</a>
+      <img style="width: 50px; margin-right: 20px" src="img/unimal.png" alt="unimal">
+        <a class="navbar-brand" href="registrasi.php">Website Pengelola Data Prodi Teknik Informatika</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -54,8 +80,8 @@ if ( isset($_POST['register']) ) {
 	<section class="mt-5 pt-5">
 		<div class="container">
 			<div class="row justify-content-center">
-            <div class="shadow-lg card bg-primary-subtle mt-5" style="width: 55rem; height: 35rem;">
-                <h1 class="mb-5 mt-5 text-secondary">Daftar Sebagai Pengelola Data</h1>
+            <div class="mt-5 shadow-lg card blur" style="width: 55rem; height: 35rem;">
+            <h1 id="typing-text" class="mb-5 mt-5 text-dark"></h1>
 				<div class="col-4 align-self-center">
                 <form actions="" method="post">
                     <div class="mb-3">
@@ -70,7 +96,7 @@ if ( isset($_POST['register']) ) {
                         <label for="password2" class="form-label">Konfirmasi Password :</label>
                         <input type="password" class="form-control" id="password2" name="password2">
                     </div>
-                    <button type="submit" class="btn btn-primary" name="register">Daftar</button>
+                    <button type="submit" class="btn btn-success" name="register">Daftar</button>
                     </form>
 				</div>
                 </div>
@@ -80,8 +106,34 @@ if ( isset($_POST['register']) ) {
 	<!-- Akhir Register Form -->
 
     <!-- Footer -->
-    <p style="margin-bottom: -1px; padding-top: 5rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
+    <p style="margin-bottom: -1px; padding-top: 5rem" class="text-dark small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
     <!-- Footer -->
+
+        <!-- JavaScript -->
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.classList.add('animate__animated', 'animate__fadeIn');
+            });
+
+            const text = "Daftar Sebagai Pengelola Data";
+            const typingTextElement = document.getElementById("typing-text");
+            let index = 0;
+
+            function type() {
+                if (index < text.length) {
+                    typingTextElement.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(type, 100); // Kecepatan mengetik (100ms)
+                } else {
+                    typingTextElement.innerHTML += '<span class="blink-caret"></span>';
+                }
+            }
+
+            type();
+        });
+        </script>
 
 </body>
 </html>

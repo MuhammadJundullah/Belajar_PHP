@@ -47,10 +47,11 @@ if( isset($_POST["tombol"])) {
 <link href="style.css" rel="stylesheet"/>	
 </head>
 
-<body>
+<body class="bg-success-subtle">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-sm fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
       <div class="container">
+      <img style="width: 50px; margin-right: 20px" src="img/unimal.png" alt="logo unimal">
         <a class="navbar-brand" href="#">Ubah Data Mahasiswa</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -74,27 +75,27 @@ if( isset($_POST["tombol"])) {
 					<form method="post" enctype="multipart/form-data">
             <input type="hidden" name="gambarLama" value="<?php echo $foto; ?>">
 					<div class="mb-3">
-						<label for="nim" class="form-label">NIM :</label>
+						<label for="nim" class="form-label text-dark">NIM :</label>
 						<input type="text" class="form-control" name="nim" id="nim" value="<?php echo $nim; ?>">
 					</div>
 					<div class="mb-3">
-						<label for="nama" class="form-label">Nama :</label>
+						<label for="nama" class="form-label text-dark">Nama :</label>
 						<input type="text" class="form-control" name="nama" id="nama" value="<?php echo $nama; ?>">
 					</div>
 					<div class="mb-3">
-						<label for="alamat" class="form-label">Alamat :</label>
+						<label for="alamat" class="form-label text-dark">Alamat :</label>
 						<input type="text" class="form-control" name="alamat" id="alamat" value="<?php echo $alamat; ?>">
 					</div>
 					<div class="mb-3">
-						<label for="email" class="form-label">Email :</label>
+						<label for="email" class="form-label text-dark">Email :</label>
 						<input type="text" class="form-control" name="email" id="email" value="<?php echo $email; ?>">
 					</div>
 					<div class="mb-3">
-						<label for="foto" class="form-label">Perbarui Foto Mahasiswa :</label>
+						<label for="foto" class="form-label text-dark">Perbarui Foto Mahasiswa :</label>
             <br><img class="rounded mb-3" src="img/<?php echo $foto;?>" alt="Foto sebelumnya">
 						<input type="file" class="form-control" name="foto" id="foto">
 					</div>
-					<button type="submit" class="btn btn-primary" name="tombol">Ubah</button>
+					<button type="submit" class="btn btn-success" name="tombol">Ubah</button>
 					</form>
 				</div>
 			</div>
