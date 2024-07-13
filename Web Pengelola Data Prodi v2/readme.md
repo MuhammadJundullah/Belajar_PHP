@@ -6,8 +6,6 @@ Website untuk mengelola data mahasiswa menggunakan Mysql Database, PHP dan Boots
 - CRUD(menambah, menghapus dan mengubah data mahasiswa) 
 - Search data dalam daftar data mahasiswa
 
-Link Hosting : http://muhammadjundullah.great-site.net
-
 Username dan Password untuk masuk sebagai pengelola
 <br>Username : admin
 <br>Password : 123
