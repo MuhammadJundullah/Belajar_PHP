@@ -22,7 +22,7 @@ Page :
   <img src="view/Daftar Mahasiswa.png">
 
 - Menampilkan daftar Dadwal Perkuliahan.
-  <img src="view/Daftar Jadwal Perkuliahan.png'93>
+  <img src="view/Daftar Jadwal Perkuliahan.png">
 
 - Menampilkan daftar Kelas.
   <img src="view/Daftar Kelas.png">
