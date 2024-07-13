@@ -12,7 +12,7 @@ Username dan Password untuk masuk sebagai pengelola
 <br>Username : admin
 <br>Password : 123
 
-page :
+Page :
 
 - Daftar Sebagai Pengelola Data.
   <img src="view/Daftar.png">
@@ -29,10 +29,8 @@ page :
 - Menampilkan daftar Kelas.
   <img src="view/Daftar Kelas.png">
 
-pardtx720tx1440tx2160tx2880tx3600tx4320tx5040tx5760tx6480tx7200tx7920tx8640pardirnaturalpartightenfactor0
-cf0 - Menampilkan daftar Mata Kuliah..
+- Menampilkan daftar Mata Kuliah.
   <img src="view/Daftar Mata Kuliah.png">
 
 - Menampilkan daftar Dosen.
   <img src="view/Daftar Dosen.png">
-}
