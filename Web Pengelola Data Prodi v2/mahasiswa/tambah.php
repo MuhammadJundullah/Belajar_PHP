@@ -29,11 +29,36 @@ if( isset($_POST["tombol"])) {
 
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-<link href="../style.css" rel="stylesheet"/>	
+<link href="../style.css" rel="stylesheet"/>
+
+<style>
+        body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/bgunimal.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            opacity: 0.09;
+            z-index: -1; 
+        }
+    </style>
 
 </head>
 
-<body class="bg-success-subtle">
+<body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
       <div class="container">
@@ -60,23 +85,21 @@ if( isset($_POST["tombol"])) {
 				<div class="col-4 align-self-center">
 					<form method="post" enctype="multipart/form-data">
 					<div class="mb-3">
-					<div class="input-group mb-4">
 						<label for="nim" class="form-label me-2 text-dark">NIM :</label>
 						<input type="text" class="form-control" name="nim" id="nim">	
     				</div>
-					<div class="input-group mb-4">
+					<div class="mb-3">
 						<label for="nama" class="form-label me-2 text-dark">Nama :</label>
 						<input type="text" class="form-control" name="nama" id="nama">	
     				</div>
-					<div class="input-group mb-4">
+					<div class="mb-3">
 						<label for="alamat" class="form-label me-2 text-dark">Alamat :</label>
 						<input type="text" class="form-control" name="alamat" id="alamat">	
     				</div>
-					<div class="input-group mb-4">
+					<div class="mb-3">
 						<label for="email" class="form-label me-2 text-dark">Email :</label>
 						<input type="text" class="form-control" name="email" id="email">	
     				</div>
-			
 					<div>
 						<label for="foto" class="form-label me-2 text-dark">Upload Foto Mahasiswa : </label>
 						<input type="file" class="form-control" name="foto" id="foto">

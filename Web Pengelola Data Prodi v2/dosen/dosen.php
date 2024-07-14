@@ -140,7 +140,7 @@ if( isset($_POST["cari"])) {
 	<!-- Akhir Data Mahasiswa -->
 
 	<!-- Footer -->
-	<p style="margin-bottom: -1px; padding-top: 9rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
+	<p style="margin-bottom: -1px; padding-top: 9rem" class="text-dark small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
 	<!-- Footer -->
 
 </body>

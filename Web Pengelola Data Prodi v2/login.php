@@ -80,11 +80,10 @@ if (isset($_POST['masuk'])) {
             opacity: 0.09;
             z-index: -1; 
         }
-
     </style>
 </head>
 
-<body class="bg-light">
+<body>
     
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">

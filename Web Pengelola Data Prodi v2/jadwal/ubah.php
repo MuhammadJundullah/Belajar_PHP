@@ -49,9 +49,35 @@ if( isset($_POST["tombol"])) {
     <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 <link href="../style.css" rel="stylesheet"/>	
+
+<style>
+        body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/bgunimal.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            opacity: 0.09;
+            z-index: -1; 
+        }
+    </style>
+
 </head>
 
-<body class="bg-success-subtle">
+<body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-sm fixed-top">
       <div class="container">
@@ -74,6 +100,17 @@ if( isset($_POST["tombol"])) {
 	<!-- Tambah Data Mahasiswa -->
 	<section class="data_mhs">
 		<div class="container">
+
+	<!-- Keterangan -->
+	<div class="row text-start mb-4">
+		<ul>
+			<h3>Keterangan :</h3>
+			<li>Nama kelas, nama dosen, dan nama matakuliah yang anda masukkan masing - masing akan akan tampil sebagai kode di tabel jadwal.</li>
+			<li>Dalam menginput data jam mulai atau jam selesai pastikan input dengan titik duanya juga contoh 08:05.</li>
+		</ul>
+	</div>
+	<!-- Keterangan -->
+
 			<div class="row justify-content-center mt-5 pt-5">
 				<div class="col-4 align-self-center">
         <Form method="post">
@@ -131,7 +168,7 @@ if( isset($_POST["tombol"])) {
 	<!-- Akhir Data Mahasiswa -->
 
   <!-- Footer -->
-  <p style="margin-bottom: -1px; padding-top: 21rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
+  <p style="margin-bottom: -1px; padding-top: 5rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
   <!-- Footer -->
 
 </body>
