@@ -57,6 +57,8 @@ if (isset($_POST['masuk'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="style.css" rel="stylesheet"/>    
+
+    <!-- css -->
     <style>
         body {
             position: relative;
@@ -81,6 +83,8 @@ if (isset($_POST['masuk'])) {
             z-index: -1; 
         }
     </style>
+    <!-- css -->
+
 </head>
 
 <body>
@@ -89,7 +93,7 @@ if (isset($_POST['masuk'])) {
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
       <div class="container">
       <img style="width: 50px; margin-right: 20px" src="img/unimal.png" alt="logo unimal">
-        <a class="navbar-brand" href="login.php">Website Pengelola Data Prodi Teknik Informatika</a>
+        <a class="navbar-brand" href="login.php">Website Pengelola Data Prodi</a>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -136,16 +140,7 @@ if (isset($_POST['masuk'])) {
     <!-- Footer -->
     <p style="margin-bottom: -1px; padding-top: 10rem" class="text-dark small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
     <!-- Footer -->
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            card.classList.add('animate__animated', 'animate__fadeIn');
-        });
-    });
-    </script>
-
+    
     <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -162,7 +157,7 @@ if (isset($_POST['masuk'])) {
                 if (index < text.length) {
                     typingTextElement.textContent += text.charAt(index);
                     index++;
-                    setTimeout(type, 100); // Kecepatan mengetik (100ms)
+                    setTimeout(type, 100);
                 } else {
                     typingTextElement.innerHTML += '<span class="blink-caret"></span>';
                 }
@@ -172,5 +167,6 @@ if (isset($_POST['masuk'])) {
         });
     </script>
     <!-- Akhir JavaScript -->
+
 </body>
 </html>

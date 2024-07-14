@@ -61,7 +61,7 @@ if ( isset($_POST['register']) ) {
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
       <div class="container">
       <img style="width: 50px; margin-right: 20px" src="img/unimal.png" alt="unimal">
-        <a class="navbar-brand" href="registrasi.php">Website Pengelola Data Prodi Teknik Informatika</a>
+        <a class="navbar-brand" href="registrasi.php">Website Pengelola Data Prodi</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -125,7 +125,7 @@ if ( isset($_POST['register']) ) {
                 if (index < text.length) {
                     typingTextElement.textContent += text.charAt(index);
                     index++;
-                    setTimeout(type, 100); // Kecepatan mengetik (100ms)
+                    setTimeout(type, 100);
                 } else {
                     typingTextElement.innerHTML += '<span class="blink-caret"></span>';
                 }

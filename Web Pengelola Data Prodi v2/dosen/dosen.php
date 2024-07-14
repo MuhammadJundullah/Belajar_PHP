@@ -33,7 +33,7 @@ if( isset($_POST["cari"])) {
 
 </head>
 
-<body>
+<body class="bg-light">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
       <div class="container">

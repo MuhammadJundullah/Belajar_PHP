@@ -33,7 +33,7 @@ if( isset($_POST["cari"])) {
 
 </head>
 
-<body>
+<body class="bg-light">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top">
       <div class="container">
@@ -72,26 +72,25 @@ if( isset($_POST["cari"])) {
 	<section class="data_mhs">
 		<div class="container">
 
-			<!-- Keterangan -->
-			<div class="row text-start mb-4">
-				<ul>
-					<h3>Keterangan :</h3>
-					<li>Saat menambahkan data matakuliah pastikan kode matakuliah tidak ada yang sama.</li>
-					<li>Data matakuliah nantinya akan sinkron dengan penambahan data matakuliah di tab <a href="../jadwal/jadwal.php">Jadwal</a>.</li>
-				</ul>
-			</div>
-			<!-- Keterangan -->
+		<!-- Keterangan -->
+		<div class="row text-start mb-4">
+			<ul>
+				<h3>Keterangan :</h3>
+				<li>Saat menambahkan data matakuliah pastikan kode matakuliah tidak ada yang sama.</li>
+				<li>Data matakuliah nantinya akan sinkron dengan penambahan data matakuliah di tab <a href="../jadwal/jadwal.php">Jadwal</a>.</li>
+			</ul>
+		</div>
 
-			<!-- Keterangan -->
-			<?php if (isset($_POST["cari"])) : ?>
-			<div class="row text-start mb-4">
-				<i class="text-secondary">Setelah mencari data untuk mengembalikan seperti semula klik <a href="matakuliah.php">url</a> lalu tekan enter.</i>
-			</div>
-			<?php endif; ?>
-			<!-- Keterangan -->
+		<!-- Keterangan -->
+		<?php if (isset($_POST["cari"])) : ?>
+		<div class="row text-start mb-4">
+			<i class="text-secondary">Setelah mencari data untuk mengembalikan seperti semula klik <a href="matakuliah.php">url</a> lalu tekan enter.</i>
+		</div>
+		<?php endif; ?>
+		<!-- Keterangan -->
 			
-			<div class="row">
-				<div class="col-3">
+		<div class="row">
+			<div class="col-3">
 
 			<!-- Search -->
 			<form action="" method="post">
@@ -103,13 +102,13 @@ if( isset($_POST["cari"])) {
 			<!-- Alkir Search -->
 
 		</div>
-	<div class="col text-end">
-		<button class="btn btn-success" type="submit" name="cari">
-			<a class="nav-link" href="tambah.php">Tambahkan Data -></a>
-		</button>
-	</div>
-	</div>
-		 
+
+			<div class="col text-end">
+				<button class="btn btn-success" type="submit" name="cari">
+					<a class="nav-link" href="tambah.php">Tambahkan Data -></a>
+				</button>
+			</div>
+		</div>
 		<table class="table table-striped table-hover table-bordered border-light" style="margin-left: 3px;">
 			<tr> 
 				<th>No</th>
