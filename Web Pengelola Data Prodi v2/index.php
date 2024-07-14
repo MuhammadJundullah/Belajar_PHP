@@ -74,12 +74,11 @@ if( isset($_POST["cari"])) {
 		<div class="container">
 
 	<!-- Keterangan -->
+	<?php if (isset($_POST["cari"])) : ?>
 	<div class="row text-start mb-4">
-		<ul>
-			<h3>Keterangan :</h3>
-			<li>Setelah mencari data untuk mengembalikan seperti semula klik <a href="index.php">url</a> lalu tekan enter.</li>
-		</ul>
+		<i class="text-secondary">Setelah mencari data untuk mengembalikan seperti semula klik <a href="index.php">url</a> lalu tekan enter.</i>
 	</div>
+    <?php endif; ?>
 	<!-- Keterangan -->
 
 	<div class="row">

@@ -78,9 +78,16 @@ if( isset($_POST["cari"])) {
 					<h3>Keterangan :</h3>
 					<li>Saat menambahkan data matakuliah pastikan kode matakuliah tidak ada yang sama.</li>
 					<li>Data matakuliah nantinya akan sinkron dengan penambahan data matakuliah di tab <a href="../jadwal/jadwal.php">Jadwal</a>.</li>
-					<li>Setelah mencari data untuk mengembalikan seperti semula klik <a href="matakuliah.php">url</a> lalu tekan enter.</li>
 				</ul>
 			</div>
+			<!-- Keterangan -->
+
+			<!-- Keterangan -->
+			<?php if (isset($_POST["cari"])) : ?>
+			<div class="row text-start mb-4">
+				<i class="text-secondary">Setelah mencari data untuk mengembalikan seperti semula klik <a href="matakuliah.php">url</a> lalu tekan enter.</i>
+			</div>
+			<?php endif; ?>
 			<!-- Keterangan -->
 			
 			<div class="row">
