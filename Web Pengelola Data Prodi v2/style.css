@@ -1,7 +1,5 @@
 body {
-  /* background-color: #e2edff; */
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 .data_mhs {
@@ -16,7 +14,7 @@ body {
 }
 
 .blur {
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -46,37 +44,26 @@ th {
 }
 
 .navbar-nav .nav-item .nav-link {
-  color: #333; /* Warna teks awal */
-  transition: color 0.3s ease, background-color 0.3s ease; /* Tambahkan transisi untuk perubahan warna */
-  border-radius: 5px; /* Menambahkan sedikit radius pada sudut */
-  padding: 5px 10px; /* Memberikan sedikit padding */
+  color: #333; 
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px; 
+  padding: 5px 10px; 
 }
 
 .navbar-nav .nav-item .nav-link.text-success {
-  color: #28a745; /* Warna teks khusus untuk link dengan kelas text-success */
+  color: #28a745; 
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-  color: #218838; /* Warna teks saat hover untuk link dengan kelas text-success */
-  background-color: #d4edda; /* Warna latar belakang saat hover untuk link dengan kelas text-success */
-}
-
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(-20px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
+  color: #218838; 
+  background-color: #d4edda; 
 }
 
 .card {
   animation: fadeIn 0.5s ease forwards;
+  border-radius: 30px;
 }
 
-/* style.css */
 .typewriter h1 {
   font-family: monospace;
   display: inline-block;
@@ -92,6 +79,17 @@ th {
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color: black; }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 

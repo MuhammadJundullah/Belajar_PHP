@@ -61,7 +61,7 @@ if( isset($_POST["cari"])) {
 				<a class="nav-link text-success fw-bold" href="index.php">Mahasiswa</a>
             </li>
             <li class="nav-item">
-				<a class="nav-link ms-5" href="logout.php">Log Out</a>
+				<a class="nav-link ms-5" href="logout.php"><b>Log Out <?= ucfirst($_SESSION["userlogin"]);?></b></a>
             </li>
           </ul>
         </div>
@@ -72,6 +72,15 @@ if( isset($_POST["cari"])) {
 	<!-- Data Mahasiswa -->
 	<section class="data_mhs">
 		<div class="container">
+
+	<!-- Keterangan -->
+	<div class="row text-start mb-4">
+		<ul>
+			<h3>Keterangan :</h3>
+			<li>Setelah mencari data untuk mengembalikan seperti semula klik <a href="index.php">url</a> lalu tekan enter.</li>
+		</ul>
+	</div>
+	<!-- Keterangan -->
 
 	<div class="row">
 		<div class="col-3">
@@ -88,7 +97,7 @@ if( isset($_POST["cari"])) {
 		</div>
 	<div class="col text-end">
 		<button class="btn btn-success" type="submit" name="cari">
-			<a class="nav-link" href="tambah.php">Tambahkan Data >></a>
+			<a class="nav-link" href="mahasiswa/tambah.php">Tambahkan Data -></a>
 		</button>
 	</div>
 	</div>
@@ -116,8 +125,8 @@ if( isset($_POST["cari"])) {
 					<td><?php echo $row["email"]?></td>
 					<td><img src="img/<?php echo $row["photo"]?>" class="rounded"></td> 
 					<td>
-						<button type="button" class="btn btn-danger"><a style="text-decoration: none;" href="hapus.php?no=<?php echo $row["no"]?>" class="text-light">Hapus</a></button>
-						<button type="button" class="btn btn-success" style="margin-left: 5px;"><a style="text-decoration: none;" href="ubah.php?no=<?php echo $row["no"]?>&nim=<?php echo $row["nim"]?>&nama=<?php echo $row["nama"]?>&alamat=<?php echo $row["alamat"]?>&email=<?php echo $row["email"]?>&foto=<?php echo $row["photo"]?>" class="text-light">Ubah</a></button>
+						<button type="button" class="btn btn-danger"><a style="text-decoration: none;" href="mahasiswa/hapus.php?no=<?php echo $row["no"]?>" class="text-light">Hapus</a></button>
+						<button type="button" class="btn btn-success" style="margin-left: 5px;"><a style="text-decoration: none;" href="mahasiswa/ubah.php?no=<?php echo $row["no"]?>&nim=<?php echo $row["nim"]?>&nama=<?php echo $row["nama"]?>&alamat=<?php echo $row["alamat"]?>&email=<?php echo $row["email"]?>&foto=<?php echo $row["photo"]?>" class="text-light">Ubah</a></button>
 					</td>
 				</tr>
 			<?php $i ++;?>

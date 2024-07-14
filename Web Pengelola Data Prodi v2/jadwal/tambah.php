@@ -60,8 +60,19 @@ if( isset($_POST["tombol"])) {
 	<!-- Tambah Data Mahasiswa -->
 	<section class="data_mhs">
 		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-4 align-self-center">
+
+	<!-- Keterangan -->
+	<div class="row text-start mb-4">
+		<ul>
+			<h3>Keterangan :</h3>
+			<li>Nama kelas, nama dosen, dan nama matakuliah yang anda masukkan masing - masing akan akan tampil sebagai kode di tabel jadwal.</li>
+			<li>Dalam menginput data jam mulai atau jam selesai pastikan input dengan titik duanya juga contoh 08:05.</li>
+		</ul>
+	</div>
+	<!-- Keterangan -->
+
+			<div class="row justify-content-center mt-5 pt-5">
+				<div class="col-5 align-self-center">
 				<Form method="post">
 					<div class="mb-3">
 						<label for="Select" class="form-label">Nama Kelas</label>

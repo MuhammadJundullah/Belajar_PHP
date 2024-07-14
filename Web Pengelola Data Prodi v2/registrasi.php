@@ -31,28 +31,28 @@ if ( isset($_POST['register']) ) {
 <link href="style.css" rel="stylesheet"/>	
 <style>
         body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url('img/bgunimal.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
-    }
-    
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: inherit;
-            background-size: inherit;
-            background-repeat: inherit;
-            background-attachment: inherit;
-            background-position: inherit;
-            filter: grayscale(30%);
-            z-index: -1;
-    }
+            opacity: 0.09;
+            z-index: -1; 
+        }
+
     </style>
 </head>
 
@@ -68,7 +68,7 @@ if ( isset($_POST['register']) ) {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-                <a class="nav-link" href="login.php">Login</a>
+                <a class="nav-link" href="login.php"><b>Login</b></a>
             </li>
           </ul>
         </div>
@@ -80,9 +80,9 @@ if ( isset($_POST['register']) ) {
 	<section class="mt-5 pt-5">
 		<div class="container">
 			<div class="row justify-content-center">
-            <div class="mt-5 shadow-lg card blur" style="width: 55rem; height: 35rem;">
+            <div class="mt-5 card blur" style="width: 55rem; height: 35rem;">
             <h1 id="typing-text" class="mb-5 mt-5 text-dark"></h1>
-				<div class="col-4 align-self-center">
+				<div class="col-5 align-self-center">
                 <form actions="" method="post">
                     <div class="mb-3">
                         <label for="username" class="form-label">Username :</label>

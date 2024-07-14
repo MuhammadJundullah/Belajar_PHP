@@ -21,13 +21,14 @@ if (isset($_SESSION['login'])) {
 }
 
 if (isset($_POST['masuk'])) {
-    $username = $_POST['username'];
-    $password = $_POST["password"];
+    $username = htmlspecialchars($_POST["username"]);
+    $password = htmlspecialchars($_POST["password"]);
 
     $result = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
     if (mysqli_num_rows($result) === 1) {
         $row = mysqli_fetch_assoc($result);
         if (password_verify($password, $row["password"])) {
+            $_SESSION["userlogin"] = $username;
             if (isset($_POST["remember"])) {
                 setcookie("id", $row["id"], time() + 3600);
                 setcookie("key", hash("sha256", $row["username"]), time() + 3600);
@@ -50,6 +51,7 @@ if (isset($_POST['masuk'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Pengelolaan Data Perkuliahan</title>
+    <link rel="icon" href="img/unimal.jpg" type="image/x-icon">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
@@ -57,28 +59,28 @@ if (isset($_POST['masuk'])) {
     <link href="style.css" rel="stylesheet"/>    
     <style>
         body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url('img/bgunimal.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: center;
+            opacity: 0.09;
+            z-index: -1; 
         }
-    
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: inherit;
-            background-size: inherit;
-            background-repeat: inherit;
-            background-attachment: inherit;
-            background-position: inherit;
-            filter: grayscale(30%);
-            z-index: -1;
-        }
+
     </style>
 </head>
 
@@ -92,7 +94,7 @@ if (isset($_POST['masuk'])) {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-                <a class="nav-link" href="registrasi.php">Daftar</a>
+                <a class="nav-link" href="registrasi.php"><b>Daftar</b></a>
             </li>
           </ul>
         </div>
@@ -104,9 +106,9 @@ if (isset($_POST['masuk'])) {
     <section class="mt-5 pt-5">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="mt-5 shadow-lg card blur" style="width: 55rem; height: 30rem;">
+                <div class="mt-5 card blur" style="width: 55rem; height: 30rem;">
                     <h1 id="typing-text" class="mb-5 mt-5 text-dark"></h1>
-                    <div class="col-4 align-self-center">
+                    <div class="col-5 align-self-center">
                     <?php if (isset($error)) : ?>
                         <p style="color: red; font-style: italic;">Username atau Password tidak sesuai!</p>    
                     <?php endif; ?>
@@ -126,7 +128,6 @@ if (isset($_POST['masuk'])) {
                             <button type="submit" class="btn btn-success" name="masuk">Masuk</button>
                         </form>
                     </div>
-                    <a class="mt-5 pt-2 text-start" href="https://github.com/MuhammadJundullah/Belajar_PHP/tree/main/Web%20Pengelola%20Data%20Prodi" target="_blank">Source Code</a>
                 </div>
             </div>
         </div>

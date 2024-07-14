@@ -74,7 +74,7 @@ if( isset($_POST["tombol"])) {
 	<!-- Tambah Data Mahasiswa -->
 	<section class="data_mhs">
 		<div class="container">
-			<div class="row justify-content-center">
+			<div class="row justify-content-center mt-5 pt-5">
 				<div class="col-4 align-self-center">
         <Form method="post">
         <div class="mb-3">

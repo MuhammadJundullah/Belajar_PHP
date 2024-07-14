@@ -80,7 +80,7 @@ if( isset($_POST["cari"])) {
 				<a class="nav-link" href="../index.php">Mahasiswa</a>
             </li>
             <li class="nav-item">
-				<a class="nav-link ms-5" href="../logout.php">Log Out</a>
+				<a class="nav-link ms-5" href="../logout.php"><b>Log Out <?= ucfirst($_SESSION["userlogin"]);?></b></a>
             </li>
           </ul>
         </div>
@@ -91,6 +91,15 @@ if( isset($_POST["cari"])) {
 	<!-- Data Mahasiswa -->
 	<section class="data_mhs">
 		<div class="container">
+
+	<!-- Keterangan -->
+	<div class="row text-start mb-4">
+		<ul>
+			<h3>Keterangan :</h3>
+			<li>Setelah mencari data untuk mengembalikan seperti semula klik <a href="jadwal.php">url</a> lalu tekan enter.</li>
+		</ul>
+	</div>
+	<!-- Keterangan -->
 
 	<div class="row">
 		<div class="col-3">
@@ -107,7 +116,7 @@ if( isset($_POST["cari"])) {
 		</div>
 	<div class="col text-end">
 		<button class="btn btn-success" type="submit">
-			<a class="nav-link" href="tambah.php">Tambahkan Data >></a>
+			<a class="nav-link" href="tambah.php">Tambahkan Data -></a>
 		</button>
 	</div>
 	</div>
@@ -147,7 +156,7 @@ if( isset($_POST["cari"])) {
 	<!-- Akhir Data Mahasiswa -->
 
 	<!-- Footer -->
-	<p style="margin-bottom: -1px; padding-top: 9rem" class="text-secondary small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
+	<p style="margin-bottom: -1px; padding-top: 9rem" class="text-dark small text-center">© 2024 Sayid Muhammad Jundullah. All rights reserved.</p>
 	<!-- Footer -->
 
 </body>

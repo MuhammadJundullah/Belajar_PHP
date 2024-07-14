@@ -60,7 +60,7 @@ if( isset($_POST["cari"])) {
 				<a class="nav-link" href="../index.php">Mahasiswa</a>
             </li>
             <li class="nav-item">
-				<a class="nav-link ms-5" href="../logout.php">Log Out</a>
+				<a class="nav-link ms-5" href="../logout.php"><b>Log Out <?= ucfirst($_SESSION["userlogin"]);?></b></a>
             </li>
           </ul>
         </div>
@@ -71,6 +71,18 @@ if( isset($_POST["cari"])) {
 	<!-- Data Mahasiswa -->
 	<section class="data_mhs">
 		<div class="container">
+	<!-- Data Mahasiswa -->
+
+	<!-- Keterangan -->
+	<div class="row text-start mb-4">
+		<ul>
+			<h3>Keterangan :</h3>
+			<li>Saat menambahkan data dosen pastikan kode dosen tidak ada yang sama.</li>
+			<li>Data dosen nantinya akan sinkron dengan penambahan data dosen di tab <a href="../jadwal/jadwal.php">Jadwal</a>.</li>
+			<li>Setelah mencari data untuk mengembalikan seperti semula klik <a href="dosen.php">url</a> lalu tekan enter.</li>
+		</ul>
+	</div>
+	<!-- Keterangan -->
 
 	<div class="row">
 		<div class="col-3">
@@ -87,7 +99,7 @@ if( isset($_POST["cari"])) {
 		</div>
 	<div class="col text-end">
 		<button class="btn btn-success" type="submit">
-			<a class="nav-link" href="tambah.php">Tambahkan Data >></a>
+			<a class="nav-link" href="tambah.php">Tambahkan Data -></a>
 		</button>
 	</div>
 	</div>
