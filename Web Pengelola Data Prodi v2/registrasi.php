@@ -138,3 +138,6 @@ if ( isset($_POST['register']) ) {
 </body>
 </html>
 
+
+
+# English or Spanish 
