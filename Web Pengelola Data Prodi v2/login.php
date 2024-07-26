@@ -29,6 +29,21 @@ if (isset($_POST['masuk'])) {
         $row = mysqli_fetch_assoc($result);
         if (password_verify($password, $row["password"])) {
             $_SESSION["userlogin"] = $username;
+
+            $ip_address = $_SERVER['REMOTE_ADDR'];
+            $user_agent = mysqli_real_escape_string($conn, $_SERVER['HTTP_USER_AGENT']);
+        
+            $sql = "INSERT INTO login_logs (username, ip_address, user_agent)
+                    VALUES ('$username', '$ip_address', '$user_agent')";
+        
+            if (mysqli_query($conn, $sql)) {
+                echo "Login log berhasil disimpan.";
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            }
+        
+            mysqli_close($conn);
+
             if (isset($_POST["remember"])) {
                 setcookie("id", $row["id"], time() + 3600);
                 setcookie("key", hash("sha256", $row["username"]), time() + 3600);
@@ -36,7 +51,6 @@ if (isset($_POST['masuk'])) {
 
             $_SESSION['login'] = true;
             header("Location: index.php");
-            exit;
         }
     }
 

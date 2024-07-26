@@ -1,5 +1,4 @@
 <x-layout>
-
-<h3 class="text-xl">Ini adalah {{$title}} Page.</h3>
-
+    <x-slot:title>{{$title}}</x-slot:title>
+    <h3>Selamat datang di {{$title}}</h3>
 </x-layout>
