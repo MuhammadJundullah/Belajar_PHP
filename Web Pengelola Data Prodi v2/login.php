@@ -131,7 +131,7 @@ if (isset($_POST['masuk'])) {
                     <?php endif; ?>
                         <form action="" method="post">
                             <div class="mb-3">
-                                <label for="username" class="form-label">Usernamee :</label>
+                                <label for="username" class="form-label">Username :</label>
                                 <input type="username" class="form-control" id="username" name="username" autofocus>
                             </div>
                             <div class="mb-3">
