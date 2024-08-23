@@ -3,7 +3,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-	$conn = mysqli_connect("localhost", "root", "", "kelas_a4");
+	// $conn = mysqli_connect("localhost", "root", "", "kelas_a4");
+	$conn = mysqli_connect("sql305.infinityfree.com", "if0_36932547", "AxtHlhlVgi", "if0_36932547_web_prodi");
 
 	function query($query) {
 		global $conn;

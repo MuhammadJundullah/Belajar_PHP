@@ -1,0 +1,22 @@
+name: Deploy to InfinityFree
+
+on:
+  push:
+    branches:
+      - main # Menjalankan saat ada push ke branch 'main'
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to FTP server
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          ftp-server: ftp://ftpupload.net
+          ftp-username: ${{ secrets.if0_36932547 }}
+          ftp-password: ${{ secrets.AxtHlhlVgi }}
+          local-dir: "../../Web Pengelola Data Prodi v2"
+          server-dir: "/manajemen-prodi.portofolio.great-site.net/htdocs"
