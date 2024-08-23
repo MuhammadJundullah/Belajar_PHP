@@ -1,5 +1,6 @@
 <?php 
-	$conn = mysqli_connect("localhost", "root", "", "kelas_a4");
+	// $conn = mysqli_connect("localhost", "root", "", "kelas_a4");
+	$conn = mysqli_connect("sql305.infinityfree.com", "if0_36932547", "AxtHlhlVgi", "if0_36932547_web_mahasiswa");
 
 	function query($query) {
 		global $conn;
