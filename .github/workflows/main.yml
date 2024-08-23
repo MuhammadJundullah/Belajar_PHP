@@ -15,8 +15,8 @@ jobs:
       - name: Deploy to FTP server
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ftpupload.net
-          username: if0_36932547
-          password: AxthlHhlVgi
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: "./Web Pengelola Data Prodi v2/"
           server-dir: "/manajemen-prodi.portofolio.great-site.net/htdocs/"
