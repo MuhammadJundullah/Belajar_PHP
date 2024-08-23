@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'laravel'),
+    'name' => env('APP_NAME', 'BLOG'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://Blog.test'),
+    'url' => env('APP_URL', 'http://blog.portofolio.great-site.net'),
 
     /*
     |--------------------------------------------------------------------------
