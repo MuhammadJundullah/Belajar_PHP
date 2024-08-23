@@ -8,12 +8,4 @@ export default defineConfig({
       refresh: true,
     }),
   ],
-  build: {
-    outDir: "dist", // Pastikan output build di folder 'dist'
-    rollupOptions: {
-      input: {
-        main: "/resources/js/app.js",
-      },
-    },
-  },
 });
