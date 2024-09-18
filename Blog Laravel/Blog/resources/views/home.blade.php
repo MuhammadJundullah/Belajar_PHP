@@ -1,4 +1,4 @@
 <x-layout>
     <x-slot:title>{{$title}}</x-slot:title>
-    <h3>Selamat datang di {{$title}}</h3>
+    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam rerum ipsum maiores! Magni assumenda repellat, accusamus magnam tempore perferendis fugit. Autem officia recusandae facilis saepe iure inventore aut harum molestiae fugiat natus velit culpa doloremque odit, sed totam possimus perferendis. Libero ipsum fugiat consequuntur quaerat, rem dolor possimus temporibus doloremque at reprehenderit deleniti unde debitis, officiis accusantium sed maiores soluta pariatur suscipit modi quae! Tenetur impedit odio, debitis soluta dicta modi facilis qui amet cumque sint nemo velit itaque minima, totam officia ea delectus cum ex tempora? Explicabo tenetur nulla, est corporis asperiores distinctio, fuga beatae aspernatur, ex ea voluptate?</h3>
 </x-layout>
