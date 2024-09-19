@@ -37,4 +37,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: "./Blog Laravel/Blog/"
-          server-dir: "/blog.portofolio.great-site.net/laravel/"
+          server-dir: "/blog.portofolio.great-site.net/htdocs/"
